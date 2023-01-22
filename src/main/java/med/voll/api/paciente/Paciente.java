@@ -24,13 +24,25 @@ public class Paciente {
     private String cpf;
 
     @Embedded
-    private Endereco Endereco;
+    private Endereco endereco;
 
     public Paciente(DadosCadastroPacientes dados) {
         this.nome = dados.nome();
         this.email = dados.email();
         this.telefone = dados.telefone();
         this.cpf = dados.cpf();
-        Endereco = new Endereco(dados.endereco());
+        endereco = new Endereco(dados.endereco());
+    }
+
+    public void atualizarCadastro(DadosAtualizacaoPacientes dados) {
+        if(dados.nome() != null){
+            this.nome = dados.nome();
+        }
+        if(dados.telefone() != null){
+            this.telefone = dados.telefone();
+        }
+        if(dados.endereco() != null){
+            this.endereco.atualizarInformacoes(dados.endereco());
+        }
     }
 }
