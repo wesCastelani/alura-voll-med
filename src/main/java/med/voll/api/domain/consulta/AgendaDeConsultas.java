@@ -18,7 +18,7 @@ public class AgendaDeConsultas {
     private PacienteRepository pacienteRepository;
     public void agendar(DadosAgentamentoConsulta dados){
 
-        
+
 
         var medico = medicoRepository.findById(dados.idMedico()).get();
         var paciente = pacienteRepository.findById(dados.idPaciente()).get();
