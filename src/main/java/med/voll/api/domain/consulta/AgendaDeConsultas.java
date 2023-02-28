@@ -37,7 +37,7 @@ public class AgendaDeConsultas {
 
     private Medico escolherMedico(DadosAgentamentoConsulta dados) {
 
-        
+        return null;
 
     }
 
