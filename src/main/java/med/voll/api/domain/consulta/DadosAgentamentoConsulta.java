@@ -8,6 +8,8 @@ import java.time.LocalDateTime;
 
 public record DadosAgentamentoConsulta(
 
+        Long id,
+
         Long idMedico,
 
         @NotNull
@@ -17,7 +19,4 @@ public record DadosAgentamentoConsulta(
         @Future LocalDateTime data,
 
         Especialidade especialidade)
-
-{
-
-}
+{}
