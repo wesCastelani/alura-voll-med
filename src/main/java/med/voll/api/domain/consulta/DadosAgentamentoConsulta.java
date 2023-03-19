@@ -8,8 +8,6 @@ import java.time.LocalDateTime;
 
 public record DadosAgentamentoConsulta(
 
-        Long id,
-
         Long idMedico,
 
         @NotNull
